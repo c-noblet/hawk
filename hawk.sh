@@ -28,4 +28,16 @@ setApacheConf() {
 
 }
 
+getWordpress() {
+  wget -c https://fr.wordpress.org/latest-fr_FR.tar.gz -O "${htmlPath}/wordpress.tar.gz"
+
+  tar -xf "${htmlPath}/wordpress.tar.gz" -C "${htmlPath}/wordpress"
+
+  mv "${htmlPath}/wordpress" "${htmlPath}/${domainName}"
+
+  rm "${htmlPath}/wordpress.tar.gz"
+}
+
+
+
 
