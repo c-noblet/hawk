@@ -38,6 +38,12 @@ getWordpress() {
   rm "${htmlPath}/wordpress.tar.gz"
 }
 
+setFolders() {
+  mkdir "${logsPath}/${domainName}"
+  mkdir "${htmlPath}/${domainName}"
 
+  chown -R "${user}:${user}" "${htmlPath}/${domainName}"
+  chown -R "${user}:${user}" "${configs.logsPath}/${domain}"
+}
 
 
