@@ -43,7 +43,14 @@ setFolders() {
   mkdir "${htmlPath}/${domainName}"
 
   chown -R "${user}:${user}" "${htmlPath}/${domainName}"
-  chown -R "${user}:${user}" "${configs.logsPath}/${domain}"
+  chown -R "${user}:${user}" "${logsPath}/${domainName}"
 }
 
+editHostsFile() {
+  echo "127.0.0.1        local.${domainName}" >> "/etc/hosts"
+}
+
+restartApache() {
+  systemctl restart apache2
+}
 
