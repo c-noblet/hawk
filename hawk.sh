@@ -8,3 +8,24 @@ if [[ $1 == "-wp" ]] ; then
 else 
   domainName = $2
 fi
+
+setApacheConf() {
+  confString = "<VirtualHost *:80>
+  ServerName local.${domainName}
+  ErrorLog ${logsPath}/${domainName}/error.log
+  CustomLog ${logsPath}/${domainName}/access.log common
+  DocumentRoot "${htmlPath}/${domainName}/"
+  <Directory ${htmlPath}/${domainName}/>
+      Options -Indexes +FollowSymLinks +MultiViews
+      AllowOverride All
+      Require all granted
+  </Directory>
+</VirtualHost>"
+
+  echo $confString >> "${a2AvailablePath}/local.${domainName}.conf"
+
+  ln -s "${a2AvailablePath}/local.${domainName}" "${a2EnabledPath}/local.${domainName}.conf"
+
+}
+
+
