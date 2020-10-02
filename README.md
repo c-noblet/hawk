@@ -6,7 +6,7 @@ Hawk is an apache2 vhost generator. It can generate vhosts by giving it a domain
 
 ## Installation
 
-Create a configs.json file at the root with the path to your home and your username :
+Create a path.config file at the project root with the path to your home and your username :
 
 ```bash
 # path.config
