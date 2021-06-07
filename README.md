@@ -6,17 +6,12 @@ Hawk is an apache2 vhost generator. It can generate vhosts by giving it a domain
 
 ## Installation
 
-Create a path.config file at the project root with the path to your home and your username :
+Change the ```custom_path``` and the ```custom_user``` according your work environment.
 
 ```bash
-# path.config
-
-htmlPath = "/home/<Me>/html",
-logsPath = "/home/<Me>/logs",
-user = "<Me>",
-hostsPath = "/etc/hosts",
-a2AvailablePath = "/etc/apache2/sites-available",
-a2EnabledPath = "/etc/apache2/sites-enabled"
+# hawk.sh
+custom_path="/"
+custom_user="user:user"
  ```
 
 ## Upgrades to do
