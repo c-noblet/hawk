@@ -2,7 +2,7 @@
 
 Hawk is an apache2 vhost generator. It can generate vhosts by giving it a domain name and you can also choose to create a Wordpress project.
 
-/!\ Be aware that this program was developed for my personal needs.
+/!\ Be aware that this program was developed for my personal needs and must not be used in a production environment.
 
 ## Installation
 
